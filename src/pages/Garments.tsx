@@ -136,19 +136,12 @@ const Garments = () => {
                     {product.description}
                   </p>
 
-                  {/* Rating */}
-                  <div className="flex items-center space-x-2 mb-4">
-                    <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (
-                        <Star 
-                          key={i} 
-                          className={`h-4 w-4 ${i < Math.floor(product.rating) ? 'text-golden-yarn fill-current' : 'text-gray-300'}`} 
-                        />
-                      ))}
-                    </div>
-                    <span className="text-sm text-muted-foreground">
-                      {product.rating} ({product.reviews} reviews)
-                    </span>
+                  {/* Price */}
+                  <div className="flex items-center space-x-2">
+                    <span className="text-2xl font-bold text-primary">{product.price}</span>
+                    {product.originalPrice && (
+                      <span className="text-lg text-muted-foreground line-through">{product.originalPrice}</span>
+                    )}
                   </div>
 
 
