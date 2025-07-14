@@ -134,13 +134,6 @@ const TableCloths = () => {
                     {product.description}
                   </p>
 
-                  {/* Price */}
-                  <div className="flex items-center space-x-2">
-                    <span className="text-2xl font-bold text-primary">{product.price}</span>
-                    {product.originalPrice && (
-                      <span className="text-lg text-muted-foreground line-through">{product.originalPrice}</span>
-                    )}
-                  </div>
 
 
                 </div>
